@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Handwashing Aid</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-row class="ion-justify-content-center">
+        <ion-card-subtitle>Start Timer and follow the Time Break-Down.</ion-card-subtitle>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+
+        <ion-card-title>
+          <h1> <strong> Timer </strong></h1>
+        </ion-card-title>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row class="ion-justify-content-center">
+        <!--Display the time value-->
+        <h1>{{ time | async }}</h1>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <!--If state = 'stop' then display START button and perform startTimer(35) on click-->
+        <ion-button *ngIf="state === 'stop'" (click)="startTimer(35)">START</ion-button>
+        <!--If state = 'start' then display STOP button and perform stopTimer() on click-->
+        <ion-button *ngIf="state === 'start'" (click)="stopTimer()">STOP</ion-button>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      <h3>Time Break-Down:</h3>
+    </ion-item>
+    <ion-item>
+      <p>35 - 30 Seconds: Wet hands with warm running water.</p>
+    </ion-item>
+    <ion-item>
+      <p>30 - 25 Seconds: Form a lather by rubbing hands together with soap.</p>
+    </ion-item>
+    <ion-item>
+      <p>25 - 20 Seconds: Scrub palms.</p>
+    </ion-item>
+    <ion-item>
+      <p>20 - 15 Seconds: Scrub backs of hands.</p>
+    </ion-item>
+    <ion-item>
+      <p>15 - 10 Seconds: Scrub fingers.</p>
+    </ion-item>
+    <ion-item>
+      <p>10 - 05 Seconds: Scrub fingertips.</p>
+    </ion-item>
+    <ion-item>
+      <p>05 - 00 Seconds: Rinse hands under clean running water.</p>
+    </ion-item>
+    <ion-item>
+      <p>Dry hands using a clean towel or air dry them.</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

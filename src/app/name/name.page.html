@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>User Name</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Enter a New User Name:</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-row class="ion-justify-content-center">
+          <!--Get User-Entered "Name" value-->
+          <ion-input [(ngModel)]="name" placeholder="Enter Username"></ion-input>
+          <!--Save entered "name" on click-->
+          <ion-button (click)="onSaveClicked()">Save</ion-button>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center">
+          <ion-item [routerLink]="['/home']" routerDirection="forward">Home</ion-item>
+        </ion-row>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

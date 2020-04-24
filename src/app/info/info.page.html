@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>COVID-19 Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>COVID-19</ion-card-subtitle>
+      <ion-card-title>The Virus</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      COVID-19 is a new illness that can affect your lungs and airways. It is caused by a virus named "Coronavirus".
+      Coronaviruses are a group of related
+      diseases in mammals and birds. In humans, coronaviruses cause respiratory tract infections that can range from
+      mild to lethal.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>The effects of COVID-19</ion-card-subtitle>
+      <ion-card-title>The Symptoms</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      It can take up to 14 days for symptoms of COVID-19 to show. These symptoms include:
+      <ion-list>
+        <ion-row>
+          <ion-item>A high fever (38 degrees Celsius or above)</ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>A cough</ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>Shortness of breath</ion-item>
+        </ion-row>
+      </ion-list>
+      If you experience these symptoms, it is requested that you sefl-isolate and contact your GP through mobile or
+      online.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>How to protect yourself and others.</ion-card-subtitle>
+      <ion-card-title>General Advice</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Recommended practices:
+      <ion-list>
+        <ion-row>
+          <ion-item>Wash hands frequently.</ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>Cover your mouth when coughing or sneezing.</ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>Immediately discard used tissues.</ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>Avoid touching your eyes, nose and mouth.</ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>Comply with requested movement restrictions unless absolutely neccessary.</ion-item>
+        </ion-row>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>All Information Sourced From GOV & HSE Websites</ion-card-subtitle>
+      <ion-card-title>For More Information: </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-row class="ion-justify-content-center">
+          <!--Button will preform openBrowserGov() on click-->
+          <ion-item>
+            <ion-button (click)="openBrowserGov()"> GOV Website </ion-button>
+          </ion-item>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <!--Button will preform openBrowserHSE() on click-->
+          <ion-item>
+            <ion-button (click)="openBrowserHSE()"> HSE Website </ion-button>
+          </ion-item>
+        </ion-row>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Latest News Headlines</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <!--Loop through all the articles stored in NewsStories array-->
+    <ion-item *ngFor="let story of NewsStories">
+      <ion-card>
+        <img src="{{story.urlToImage}}" />
+        <ion-card-header>
+          <ion-card-title>
+            {{story.title}}
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{story.content}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

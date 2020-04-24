@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      COVID-19 Help App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-row class="ion-justify-content-center">
+      <ion-item>
+        <h1><strong> Stay Safe {{username}}!</strong></h1>
+      </ion-item>
+    </ion-row>
+  </ion-list>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-list>
+        <ion-row class="ion-justify-content-center">
+          <ion-card-title><strong>Menu</strong></ion-card-title>
+        </ion-row>
+      </ion-list>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-row class="ion-justify-content-center">
+          <ion-item [routerLink]="['/news']" routerDirection="forward">News</ion-item>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center">
+          <ion-item [routerLink]="['/timer']" routerDirection="forward">Hand Washing Aid</ion-item>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center">
+          <ion-item [routerLink]="['/info']" routerDirection="forward">Information</ion-item>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center">
+          <ion-item [routerLink]="['/name']" routerDirection="forward">Change User Name</ion-item>
+        </ion-row>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
